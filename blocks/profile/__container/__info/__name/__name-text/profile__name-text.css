@@ -1,6 +1,7 @@
 .profile__name-text{
     font-weight: 500;
-    text-overflow: ellipsis;
+     text-overflow: ellipsis;/* Молодец что примянил это свойство, я сам о нем только месяц назад узнал, поэтому пришлось кринжануть на работе написав
+     text.length > 35 ? text.slice(0, 35){'...'} : text */
     white-space: nowrap;
     overflow: hidden;
     max-width: 400px;

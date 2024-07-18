@@ -1,8 +1,8 @@
 .profile__subtitle{
     font-weight: 400;
     padding-top: 16px;
-    text-overflow: ellipsis;
+     text-overflow: ellipsis; /*Всё еще молодец*/
     white-space: nowrap;
     overflow: hidden;
-    max-width: 300px;
+    max-width: 300px; /*Хорошо, что задаешь max-width вместо просто width*/
 }

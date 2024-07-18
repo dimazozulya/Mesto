@@ -1,3 +1,4 @@
+/* Опять же названия файла у тебя почему-то написано в camelCase, можно же просто написать style.css */
 @import url(../vendor/normalize.css);
 @import url(../blocks/root/root.css);
 @import url(../vendor/fonts.css);
@@ -22,12 +23,12 @@
 
 
 
-.closeBtn{
-    all: unset;
+.closeBtn{ /* Названия класса сделай такое же как у других */
+     all: unset; /* Это ты где нашел, я не знаю такого свойства */
     max-width: 32px;
     max-height: 32px;
     position: absolute;
-    top: -40px;
+    top: -40px; /* Отрицательных свойств лучше избегать */
     left: 100%;
     cursor: pointer;
 }
@@ -80,7 +81,7 @@
     margin: 0 15px;
     
 }
-.element__image{
+.element__image{ 
     object-fit: cover;
     max-width: 400px;
     width: 100%;
@@ -88,10 +89,10 @@
     overflow: hidden;
     border-radius: 10% 10% 0 0;
 }
-.element__image_styles{
+.element__image_styles{ /* Этот класс можно просто удалить*/
     width: 100%;
 }
-.element__title{
+.element__title{ /* Этот класс назови element__container*/
     background-color: #fff;
     color: #000;
     height: 80px;
@@ -100,7 +101,7 @@
     grid-template-columns: 200px 1fr;
     border-radius: 0 0 20px 20px;
 }
-.element__title_styles{
+.element__title_styles{ /* Этот класс можно просто удалить*/
     padding-left: 15px;
     font-size: 24px;
     font-weight: 900px;

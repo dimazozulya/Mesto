@@ -1,3 +1,4 @@
+<!-- Перенеси весь код отсюда в index.html, а этот файл удали -->
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -9,17 +10,17 @@
     <body class="root">
         <header class="header">
             <a href="header__logo">
-                <img src="/images/logo.svg" alt="#" class="header__image">
+                 <img src="/images/logo.svg" alt="#" class="header__image"> <!-- alt атрибут информативный задай -->
             </a>
         </header>
         <section class="profile">
             <div class="profile__container">
                 <a href="#" class="profile__link-img">
-                    <img src="/images/profile__img.jpg" alt="#" class="profile__img">
+                    <img src="/images/profile__img.jpg" alt="#" class="profile__img"> <!-- alt атрибут информативный задай -->
                 </a>
                 <div class="profile__info">
                     <div class="profile__name">
-                        <h1 class="profile__name-text">
+                        <h1 class="profile__name-text"> <!-- Тег h1 примянен правильно, молодец -->
                             Жак-Ив Кусто
                         </h1>
                         <div class="profile__name-btn">
@@ -31,7 +32,7 @@
                     </h2>
                 </div>
                 <div class="profile__btn">
-                    <button class="profile__btn_style">+</button>
+                    <button class="profile__btn_style">+</button> <!-- Там точно именно такой "+"? Я не могу посмотреть макет, но мне кажется я svg вставлял -->
                 </div>
                
             </div>
@@ -39,12 +40,12 @@
 
         <section id="popup" class="popup">
             <div class="popup__container">
-                    <button class="closeBtn">
-                        <img src="/images/Close Icon.svg" alt="#" class="close__icon">
+                    <button class="closeBtn"> <!-- У тебя до этого классы названы по БЭМ, а тут ты решил записать ее в camelCase, зачем? -->
+                        <img src="/images/Close Icon.svg" alt="#" class="close__icon"> <!-- Избегай названия чего либо с пробелом, может отъебнуть, лучшк использовать "_" или "-" , к примеру сlose-icon.svg -->
                     </button>
-                    <div class="popup__opened-inner"></div>
+                    <div class="popup__opened-inner"></div> <!-- Зачем этот div, он ни на что не влияет? -->
                     <h1 class="popup__title">Редактировать профиль</h1>
-                    <form id="inputs" action="" class="inputs">
+                    <form id="inputs" action="" class="inputs"> <!-- Довольно странное название для классаи Id у тега формы, лучше назвать form просто -->
                         <input class="popup__input popup__input-name" placeholder="Введите имя">
                         <input class="popup__input popup__input-job" placeholder="Введите место работы">
                         <button type="submit" class="popup__submit-button">Сохранить</button>      
@@ -57,21 +58,21 @@
             <div class="elements__container">
                 <div class="element__card">
                     <div class="element__image">
-                        <img src="/images/image__card-karachaevsk.png" alt="#" class="element__image_styles">
+                        <img src="/images/image__card-karachaevsk.png" alt="#" class="element__image_styles"> <!-- alt атрибут информативный задай, всех карточек касается и почему тот картинка в формате png, а все остальные в jpg? Эту тоже jpg сделай -->
                     </div>
                     <div class="element__title">
-                        <h1 class="element__title_styles">
+                        <h1 class="element__title_styles"> <!-- Тег h1 может быть только единственным на странице по семантике, измени на h2 здесь и у остальных карточек -->
                             Карачаевск
                         </h1>
                             <img src="/images/element__like.svg" alt="#" class="element__like-img">
                     </div>
                 </div>
                 <div class="element__card">
-                    <div class="element__image">
-                        <img src="/images/image__card-elbrus.jpg" alt="#" class="element__image_styles">
+                    <div class="element__image"> <!-- Зачем этот div, можно просто все его стили задать в класс img и всё -->
+                        <img src="/images/image__card-elbrus.jpg" alt="#" class="element__image_styles"> <!-- Вот тут названия класса тоже немного странное, но как я выше написал можнл сюда все стили перенести и дать класс element__image -->
                     </div>
-                    <div class="element__title">
-                        <h1 class="element__title_styles">
+                    <div class="element__title"> <!-- Вот тут названия класса тоже немного странное, назови это лучше element__container-->
+                        <h1 class="element__title_styles"> <!-- А вот это уже тогда будет называться нормально element__title тоже -->
                             Гора Эльбрус
                         </h1>
                             <img src="/images/element__like.svg" alt="#" class="element__like-img">
@@ -135,4 +136,13 @@
 </html>
 
 
-
+ <!-- Пример как должна выглядеть карточка -->
+<!-- <div class="element__card">
+    <img src="/images/image__card-elbrus.jpg" alt="#" class="element__image">
+    <div class="element__container">
+        <h1 class="element__title">
+            Гора Эльбрус
+        </h1>
+            <img src="/images/element__like.svg" alt="#" class="element__like-img">
+    </div>
+</div>  -->
