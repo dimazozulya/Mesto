@@ -1,0 +1,83 @@
+@import url(../vendor/normalize.css);
+@import url(../blocks/root/root.css);
+@import url(../vendor/fonts.css);
+@import url(../blocks/header/header.css);
+@import url(../blocks/profile/profile.css);
+@import url(../blocks/profile/__container/profile__container.css);
+@import url(../blocks/profile/__container/__img/profile__img.css);
+@import url(../blocks/profile/__container/__info/profile__info.css);
+@import url(../blocks/profile/__container/__info/__name/profile__name.css);
+@import url(../blocks/profile/__container/__info/__name/__name-btn/profile__name-btn.css);
+@import url(../blocks/profile/__container/__info/__name/__name-text/profile__name-text.css);
+@import url(../blocks/profile/__container/__info/__subtitle/profile__subtitle.css);
+@import url(../blocks/profile/__container/__btn/profile__btn.css);
+@import url(../blocks/profile/__container/__btn/_style/profile__btn_style.css);
+
+
+
+
+
+
+.elements{
+    margin-top: 40px;
+}
+.elements__container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 17px 20px;
+}
+.element__card{
+    max-width: 282px;
+    max-height: 361px;
+    
+}
+.element__image{
+    max-width: 282px;
+    height: 282px;
+    overflow: hidden;
+    border-radius: 10% 10% 0 0;
+}
+.element__image_styles{
+    width: 100%;
+}
+.element__title{
+    background-color: #fff;
+    color: #000;
+    height: 80px;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 230px 1fr;
+    border-radius: 0 0 20px 20px;
+}
+.element__title_styles{
+    padding-left: 21px;
+    font-size: 24px;
+    font-weight: 900px;
+    
+}
+
+.element__like-img{
+    width: 22px;
+    height: 20px;
+    cursor: pointer;
+}
+
+
+.footer{
+    margin-top: 70px;
+    padding-bottom: 60px;
+}
+.footer__container-author{
+    font-weight: 400;
+    font-size: 18px;
+    color: #545454;
+}
+
+
+
+
+
+
+
+
+

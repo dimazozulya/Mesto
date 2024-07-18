@@ -1,0 +1,5 @@
+.profile__container{
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 150px auto auto;
+}
