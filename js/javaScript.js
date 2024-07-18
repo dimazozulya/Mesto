@@ -20,6 +20,7 @@ window.addEventListener('click', function(event) {
 
 
 
+
 let formElement = document.querySelector('#inputs');
 
 let nameInput = document.querySelector('.popup__input-name');
