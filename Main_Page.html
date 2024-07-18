@@ -12,7 +12,6 @@
                 <img src="/images/logo.svg" alt="#" class="header__image">
             </a>
         </header>
-
         <section class="profile">
             <div class="profile__container">
                 <a href="#" class="profile__link-img">
@@ -35,6 +34,22 @@
                     <button class="profile__btn_style">+</button>
                 </div>
                
+            </div>
+        </section>
+
+        <section id="popup" class="popup">
+            <div class="popup__container">
+                    <button class="closeBtn">
+                        <img src="/images/Close Icon.svg" alt="#" class="close__icon">
+                    </button>
+                    <div class="popup__opened-inner"></div>
+                    <h1 class="popup__title">Редактировать профиль</h1>
+                    <form id="inputs" action="" class="inputs">
+                        <input class="popup__input popup__input-name" placeholder="Введите имя">
+                        <input class="popup__input popup__input-job" placeholder="Введите место работы">
+                        <button type="submit" class="popup__submit-button">Сохранить</button>      
+                    </form>
+                   
             </div>
         </section>
 
@@ -108,7 +123,6 @@
                 </div>
             </div>
         </section>
-
         <footer class="footer">
             <div class="footer__container">
                 <h2 class="footer__container-author">
@@ -116,6 +130,7 @@
                 </h2>
             </div>
         </footer>
+        <script src="/js/javaScript.js"></script>
     </body>
 </html>
 
