@@ -1,6 +1,6 @@
 
 let modal = document.getElementById('popup');
-let closeButton = document.querySelector('.closeBtn');
+let closeButton = document.querySelector('.popup__close-btn');
 let openButton = document.querySelector('.profile__name-btn');
 
 function openModal() {
@@ -21,7 +21,7 @@ window.addEventListener('click', function(event) {
 
 
 
-let formElement = document.querySelector('#inputs');
+let formElement = document.querySelector('#form');
 
 let nameInput = document.querySelector('.popup__input-name');
 let jobInput = document.querySelector('.popup__input-job');

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="pages/style.css">
+    <title>Mesto</title>
+</head>
+    <body class="root">
+        <header class="header">
+            <a href="header__logo">
+                <img src="/images/logo.svg" alt="Логотип сайта" class="header__image">
+            </a>
+        </header>
+        <section class="profile">
+            <div class="profile__container">
+                <a href="#" class="profile__link-img">
+                    <img src="/images/profile__img.jpg" alt="Изображение Вашего профиля" class="profile__img">
+                </a>
+                <div class="profile__info">
+                    <div class="profile__name">
+                        <h1 class="profile__name-text">
+                            Жак-Ив Кусто
+                        </h1>
+                        <div class="profile__name-btn">
+                            <img src="/images/Vector-pencil.svg" alt="Кнопка редактировать" class="profile__name-pencil">
+                        </div>
+                    </div>
+                    <h2 class="profile__subtitle">
+                        Исследователь океана
+                    </h2>
+                </div>
+                <div class="profile__btn">
+                    <button class="profile__btn_style">+</button>
+                </div>
+               
+            </div>
+        </section>
+
+        <section id="popup" class="popup">
+            <div class="popup__container">
+                    <button class="popup__close-btn">
+                        <img src="/images/close-icon.svg" alt="Кнопка закрытия" class="close__icon">
+                    </button>
+                    <h2 class="popup__title">Редактировать профиль</h2>
+                    <form id="form" action="" class="inputs">
+                        <input class="popup__input popup__input-name" placeholder="Введите имя">
+                        <input class="popup__input popup__input-job" placeholder="Введите место работы">
+                        <button type="submit" class="popup__submit-button">Сохранить</button>      
+                    </form>
+                   
+            </div>
+        </section>
+
+        <section class="elements">
+            <div class="elements__container">
+                <div class="element__card">
+                    <div class="element__image">
+                        <img src="/images/image__card-karachaevsk.jpg" alt="Изображение карточки" class="element__image_styles">
+                    </div>
+                    <!-- Данные изображения вписаны и растянуты внутри блока, которые ограничены по ширине и высоте, сейчас вписал все значения в img, все сломалось :(  -->
+                    <div class="element__container">
+                        <h2 class="element__title">
+                            Карачаевск
+                        </h2>
+                            <img src="/images/element__like.svg" alt="Кнопка Like" class="element__like-img">
+                    </div>
+                </div>
+                <div class="element__card">
+                    <div class="element__image">
+                        <img src="/images/image__card-elbrus.jpg" alt="Изображение карточки" class="element__image_styles">
+                    </div>
+                    <div class="element__container">
+                        <h2 class="element__title">
+                            Гора Эльбрус
+                        </h2>
+                            <img src="/images/element__like.svg" alt="Кнопка Like" class="element__like-img">
+                    </div>
+                </div>
+                <div class="element__card">
+                    <div class="element__image">
+                        <img src="/images/image__card-dombay.jpg" alt="Изображение карточки" class="element__image_styles">
+                    </div>
+                    <div class="element__container">
+                        <h2 class="element__title">
+                            Домбай 
+                        </h2>
+                            <img src="/images/element__like.svg" alt="Кнопка Like" class="element__like-img">
+                    </div>
+                </div>
+                <div class="element__card">
+                    <div class="element__image">
+                        <img src="/images/image__card-elbrus-2.jpg" alt="Изображение карточки" class="element__image_styles">
+                    </div>
+                    <div class="element__container">
+                        <h2 class="element__title">
+                            Гора Эльбрус
+                        </h2>
+                            <img src="/images/element__like.svg" alt="Кнопка Like" class="element__like-img">
+                    </div>
+                </div>
+                <div class="element__card">
+                    <div class="element__image">
+                        <img src="/images/image__card-dombay-2.jpg" alt="Изображение карточки" class="element__image_styles">
+                    </div>
+                    <div class="element__container">
+                        <h2 class="element__title">
+                            Домбай
+                        </h2>
+                            <img src="/images/element__like.svg" alt="Кнопка Like" class="element__like-img">
+                    </div>
+                </div>
+                <div class="element__card">
+                    <div class="element__image">
+                        <img src="/images/image__card-karachaevo-cherkessk.jpg" alt="Изображение карточки" class="element__image_styles">
+                    </div>
+                    <div class="element__container">
+                        <h2 class="element__title">
+                            Карачаево-Черкессия
+                        </h2>
+                            <img src="/images/element__like.svg" alt="Кнопка Like" class="element__like-img">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer class="footer">
+            <div class="footer__container">
+                <h2 class="footer__container-author">
+                    © 2024 Mesto Russia
+                </h2>
+            </div>
+        </footer>
+        <script src="/js/javaScript.js"></script>
+    </body>
+</html>
+
+
+
