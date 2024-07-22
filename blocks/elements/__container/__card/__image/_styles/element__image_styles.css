@@ -1,3 +1,4 @@
-.element__image_styles{
-    width: 100%;
+.element__image img{
+  /* object-fit: contain; */
+ 
 }

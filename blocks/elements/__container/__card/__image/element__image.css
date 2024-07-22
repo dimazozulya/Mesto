@@ -1,7 +1,10 @@
 .element__image{
-    object-fit: cover;
-    max-width: 400px;
     height: 282px;
+    width: 100%;
     overflow: hidden;
     border-radius: 10% 10% 0 0;
+}
+.element__image img {
+    max-width: 200%; 
+    max-height: 150%; 
 }
