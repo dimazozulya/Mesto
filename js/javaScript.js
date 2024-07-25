@@ -1,22 +1,46 @@
 
-let modal = document.getElementById('popup');
-let closeButton = document.querySelector('.popup__close-btn');
-let openButton = document.querySelector('.profile__name-btn');
+const modal = document.getElementById('popup-profile');
+const closeButton = document.querySelector('.popup__close-btn');
+const openButton = document.querySelector('.profile__name-btn');
 
 function openModal() {
   modal.classList.add('popup_active');
-}
+};
 function closeModal() {
   modal.classList.remove('popup_active');
-}
+};
 closeButton.addEventListener('click', closeModal);
 openButton.addEventListener('click', openModal);
+
 
 window.addEventListener('click', function(event) {
   if (event.target === modal) {
     closeModal();
   }
 });
+
+
+const modalCard = document.getElementById('popup-card');
+const closeButtonCard = document.querySelector('.popup__close-btn-card');
+const openButtonCard = document.querySelector('.profile__btn');
+
+function openModalCard() {
+  modalCard.classList.add('popup_active');
+};
+function closeModalCard() {
+  modalCard.classList.remove('popup_active');
+};
+closeButtonCard.addEventListener('click', closeModalCard);
+openButtonCard.addEventListener('click', openModalCard);
+
+window.addEventListener('click', function(event) {
+  if (event.target === modalCard) {
+    closeModalCard();
+  }
+});
+
+
+
 
 
 
@@ -43,7 +67,6 @@ function handleFormSubmit(evt) {
 
 formElement.addEventListener('submit', handleFormSubmit);
 saveButton.addEventListener('click', closeModal);
-
 
   const initialCards = [
     {
@@ -84,5 +107,6 @@ initialCards.forEach(item =>{
 
   content.appendChild(clone);
                           
-})
+});
+
 

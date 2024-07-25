@@ -37,7 +37,7 @@
             </div>
         </section>
 
-        <section id="popup" class="popup">
+        <section id="popup-profile" class="popup popup-profile">
             <div class="popup__container">
                     <button class="popup__close-btn">
                         <img src="/images/close-icon.svg" alt="Кнопка закрытия" class="close__icon">
@@ -46,6 +46,21 @@
                     <form id="form" action="" class="inputs">
                         <input class="popup__input popup__input-name" placeholder="Введите имя">
                         <input class="popup__input popup__input-job" placeholder="Введите место работы">
+                        <button type="submit" class="popup__submit-button">Сохранить</button>      
+                    </form>
+                   
+            </div>
+        </section>
+
+        <section id="popup-card" class="popup">
+            <div class="popup__container">
+                    <button class="popup__close-btn popup__close-btn-card">
+                        <img src="/images/close-icon.svg" alt="Кнопка закрытия" class="close__icon">
+                    </button>
+                    <h2 class="popup__title">Новое Место</h2>
+                    <form id="form" action="" class="inputs">
+                        <input class="popup__input popup__input-name" placeholder="Введите место">
+                        <input class="popup__input popup__input-job" placeholder="Введите ссылку">
                         <button type="submit" class="popup__submit-button">Сохранить</button>      
                     </form>
                    
