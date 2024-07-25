@@ -41,10 +41,6 @@ window.addEventListener('click', function(event) {
 
 
 
-
-
-
-
 let formElement = document.querySelector('#form');
 
 let nameInput = document.querySelector('.popup__input-name');
@@ -61,7 +57,7 @@ function handleFormSubmit(evt) {
 
     nameDisplay.textContent = nameValue;
     jobDisplay.textContent = jobValue;
-}
+};
 
     let saveButton = document.querySelector('.popup__submit-button');
 
@@ -105,8 +101,39 @@ initialCards.forEach(item =>{
   clone.querySelector('.element__title').textContent = item.name;
   clone.querySelector('.element__image_style').src = item.link;
 
-  content.appendChild(clone);
-                          
+  content.appendChild(clone);                     
 });
 
+
+
+
+
+
+
+let formElementCard = document.querySelector('#form-card');
+
+let nameInputCard = document.querySelector('.popup__input-name-card');
+let placeInputCard = document.querySelector('.popup__input-place-card');
+
+function addFormSubmit(evt) {
+    evt.preventDefault(); 
+
+    let cardNameValue = nameInputCard.value;
+    let cardPlaceValue = placeInputCard.value;
+
+    const clone = template.content.cloneNode(true);
+
+    let cardNameDisplay = clone.querySelector('.element__title');
+    let cardPlaceDisplay = clone.querySelector('.element__image_style');
+
+    cardNameDisplay.textContent = cardNameValue;
+    cardPlaceDisplay.src = cardPlaceValue;
+
+    content.appendChild(clone);
+};
+
+    let saveButtonCard = document.querySelector('.popup__submit-button-card');
+
+formElementCard.addEventListener('submit', addFormSubmit);
+saveButtonCard.addEventListener('click', closeModalCard);
 
