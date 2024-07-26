@@ -38,28 +38,25 @@ window.addEventListener('click', function(event) {
     closeModalCard();
   }
 });
+const formElement = document.querySelector('#form');
 
-
-
-let formElement = document.querySelector('#form');
-
-let nameInput = document.querySelector('.popup__input-name');
-let jobInput = document.querySelector('.popup__input-job');
+const nameInput = document.querySelector('.popup__input-name');
+const jobInput = document.querySelector('.popup__input-job');
 
 function handleFormSubmit(evt) {
     evt.preventDefault(); 
 
-    let nameValue = nameInput.value;
-    let jobValue = jobInput.value;
+    const nameValue = nameInput.value;
+    const jobValue = jobInput.value;
 
-    let nameDisplay = document.querySelector('.profile__name-text');
-    let jobDisplay = document.querySelector('.profile__subtitle');
+    const nameDisplay = document.querySelector('.profile__name-text');
+    const jobDisplay = document.querySelector('.profile__subtitle');
 
     nameDisplay.textContent = nameValue;
     jobDisplay.textContent = jobValue;
 };
 
-    let saveButton = document.querySelector('.popup__submit-button');
+const saveButton = document.querySelector('.popup__submit-button');
 
 formElement.addEventListener('submit', handleFormSubmit);
 saveButton.addEventListener('click', closeModal);
@@ -95,50 +92,56 @@ saveButton.addEventListener('click', closeModal);
 const template = document.getElementById('card');
 const content = document.getElementById('content');
 
-initialCards.forEach(item =>{
-  const clone = template.content.cloneNode(true);
+function renderCards(cards) {
+
+
+  content.innerHTML = ''; 
   
-  clone.querySelector('.element__title').textContent = item.name;
-  clone.querySelector('.element__image_style').src = item.link;
-  
-  const likeButton = clone.querySelector('.element__like-svg');
-  likeButton.addEventListener('click', (e) => {
-    console.log('Button clicked');
-    e.currentTarget.classList.toggle('element__like-svg-active');
-  });
 
-  content.appendChild(clone);                     
-});
-
-
-
-
-
-
-let formElementCard = document.querySelector('#form-card');
-
-let nameInputCard = document.querySelector('.popup__input-name-card');
-let placeInputCard = document.querySelector('.popup__input-place-card');
-
-function addFormSubmit(evt) {
-    evt.preventDefault(); 
-
-    let cardNameValue = nameInputCard.value;
-    let cardPlaceValue = placeInputCard.value;
-
+  cards.forEach((item, index) => {
     const clone = template.content.cloneNode(true);
+    
+    clone.querySelector('.element__title').textContent = item.name;
+    clone.querySelector('.element__image_style').src = item.link;
+    
+    const likeButton = clone.querySelector('.element__like-svg');
+    likeButton.addEventListener('click', (e) => {
+      console.log('Button clicked');
+      e.currentTarget.classList.toggle('element__like-svg-active');
+    });
 
-    let cardNameDisplay = clone.querySelector('.element__title');
-    let cardPlaceDisplay = clone.querySelector('.element__image_style');
-
-    cardNameDisplay.textContent = cardNameValue;
-    cardPlaceDisplay.src = cardPlaceValue;
+    const deleteButton = clone.querySelector('.element__card_remove');
+    deleteButton.addEventListener('click', () => {
+      console.log('Delete button clicked');
+      initialCards.splice(index, 1); 
+      renderCards(initialCards); 
+    });
 
     content.appendChild(clone);
-};
+  });
+}
+renderCards(initialCards);
 
-    let saveButtonCard = document.querySelector('.popup__submit-button-card');
+
+const formElementCard = document.querySelector('#form-card');
+const nameInputCard = document.querySelector('.popup__input-name-card');
+const placeInputCard = document.querySelector('.popup__input-place-card');
+const saveButtonCard = document.querySelector('.popup__submit-button-card');
+
+
+function addFormSubmit(evt) {
+  evt.preventDefault(); 
+
+  const cardNameValue = nameInputCard.value;
+  const cardPlaceValue = placeInputCard.value;
+  initialCards.unshift({ name: cardNameValue, link: cardPlaceValue });
+  renderCards(initialCards);
+  formElementCard.reset();
+};
+renderCards(initialCards);
 
 formElementCard.addEventListener('submit', addFormSubmit);
 saveButtonCard.addEventListener('click', closeModalCard);
+
+
 
