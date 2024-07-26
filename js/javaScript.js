@@ -97,13 +97,18 @@ const content = document.getElementById('content');
 
 initialCards.forEach(item =>{
   const clone = template.content.cloneNode(true);
-
+  
   clone.querySelector('.element__title').textContent = item.name;
   clone.querySelector('.element__image_style').src = item.link;
+  
+  const likeButton = clone.querySelector('.element__like-svg');
+  likeButton.addEventListener('click', (e) => {
+    console.log('Button clicked');
+    e.currentTarget.classList.toggle('element__like-svg-active');
+  });
 
   content.appendChild(clone);                     
 });
-
 
 
 
