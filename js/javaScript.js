@@ -16,7 +16,7 @@ openButton.addEventListener('click', openModal);
 window.addEventListener('click', function(event) {
   if (event.target === modal) {
     closeModal();
-  }
+  };
 });
 
 
@@ -87,23 +87,36 @@ saveButton.addEventListener('click', closeModal);
       link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/baikal.jpg'
     }
   ];
-
-
 const template = document.getElementById('card');
 const content = document.getElementById('content');
 
 function renderCards(cards) {
-
-
   content.innerHTML = ''; 
-  
-
   cards.forEach((item, index) => {
     const clone = template.content.cloneNode(true);
-    
-    clone.querySelector('.element__title').textContent = item.name;
-    clone.querySelector('.element__image_style').src = item.link;
-    
+    const cardTitle = clone.querySelector('.element__title');
+    const cardImageBtn = clone.querySelector('.element__image');
+    const cardImage = clone.querySelector('.element__image_style');
+    const popupImage = clone.querySelector('.element__image_popup');
+    const popupTitle = clone.querySelector('.element__title_popup');
+    const popupElement = clone.querySelector('.popup__element');
+    const closeButton = clone.querySelector('.popup__element-close');
+
+
+    cardTitle.textContent = item.name;
+    cardImage.src = item.link;
+
+    popupTitle.textContent = item.name;
+    popupImage.src = item.link;
+
+    cardImageBtn.addEventListener('click', () => {
+      popupElement.classList.add('popup_active');
+    });
+
+    closeButton.addEventListener('click', () => {
+      popupElement.classList.remove('popup_active');
+    });
+
     const likeButton = clone.querySelector('.element__like-svg');
     likeButton.addEventListener('click', (e) => {
       console.log('Button clicked');
@@ -116,12 +129,10 @@ function renderCards(cards) {
       initialCards.splice(index, 1); 
       renderCards(initialCards); 
     });
-
     content.appendChild(clone);
   });
 }
 renderCards(initialCards);
-
 
 const formElementCard = document.querySelector('#form-card');
 const nameInputCard = document.querySelector('.popup__input-name-card');
@@ -134,7 +145,7 @@ function addFormSubmit(evt) {
 
   const cardNameValue = nameInputCard.value;
   const cardPlaceValue = placeInputCard.value;
-  initialCards.unshift({ name: cardNameValue, link: cardPlaceValue });
+  initialCards.unshift({name: cardNameValue, link: cardPlaceValue});
   renderCards(initialCards);
   formElementCard.reset();
 };
@@ -142,6 +153,3 @@ renderCards(initialCards);
 
 formElementCard.addEventListener('submit', addFormSubmit);
 saveButtonCard.addEventListener('click', closeModalCard);
-
-
-

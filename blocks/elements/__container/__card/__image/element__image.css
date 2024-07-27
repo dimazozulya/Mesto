@@ -3,6 +3,7 @@
     width: 100%;
     overflow: hidden;
     border-radius: 10% 10% 0 0;
+    cursor: pointer;
 }
 .element__image img {
     max-width: 200%; 
