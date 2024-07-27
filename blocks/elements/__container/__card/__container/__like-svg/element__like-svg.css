@@ -1,0 +1,21 @@
+
+.element__like-svg{
+    width: 32px;
+    height: 30px;
+    cursor: pointer;
+    justify-items: center;
+    margin-left: auto;
+    margin-right: 30px;
+    fill: none;
+}
+
+.element__like-svg-active{
+    width: 32px;
+    height: 30px;
+    cursor: pointer;
+    justify-items: center;
+    margin-left: auto;
+   
+    fill: none;
+    fill:black;
+}

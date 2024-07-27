@@ -1,9 +1,10 @@
 .element__container{
     background-color: #fff;
+    max-width: 282px;
     color: #000;
     height: 80px;
     display: grid;
     align-items: center;
-    grid-template-columns: 200px 1fr;
+    grid-template-columns: 4fr 1fr;
     border-radius: 0 0 20px 20px;
 }

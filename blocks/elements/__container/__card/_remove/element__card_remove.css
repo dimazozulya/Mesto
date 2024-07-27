@@ -1,0 +1,8 @@
+.element__card_remove{
+    width: 19px;
+    height: 19px;
+    position: absolute;
+    top: 5% ;
+    right: 7%;
+    cursor: pointer;
+}
