@@ -1,11 +1,12 @@
-.element__image{
+.element__image_style{
+    display: block;
     height: 282px;
     width: 100%;
     overflow: hidden;
     border-radius: 10% 10% 0 0;
     cursor: pointer;
 }
-.element__image img {
+.element__image_style img {
     max-width: 200%; 
     max-height: 150%; 
 }
