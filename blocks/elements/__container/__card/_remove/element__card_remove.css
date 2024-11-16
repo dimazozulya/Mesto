@@ -6,3 +6,9 @@
     right: 7%;
     cursor: pointer;
 }
+
+.element__card_remove_styles:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+    transition: transform 0.3s ease, fill 0.3s ease;
+}

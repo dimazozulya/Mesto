@@ -3,19 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="pages/style.css">
     <title>Mesto</title>
 </head>
     <body class="root">
         <header class="header">
             <a href="header__logo">
-                <img src="/images/logo.svg" alt="Логотип сайта" class="header__image">
+                <img src="./images/logo.svg" alt="Логотип сайта" class="header__image">
             </a>
         </header>
         <section class="profile">
             <div class="profile__container">
                 <a href="#" class="profile__link-img">
-                    <img src="/images/profile__img.jpg" alt="Изображение Вашего профиля" class="profile__img">
+                    <img src="./images/profile__img.jpg" alt="Изображение Вашего профиля" class="profile__img">
                 </a>
                 <div class="profile__info">
                     <div class="profile__name">
@@ -23,7 +22,7 @@
                             Жак-Ив Кусто
                         </h1>
                         <div class="profile__name-btn">
-                            <img src="/images/Vector-pencil.svg" alt="Кнопка редактировать" class="profile__name-pencil">
+                            <img src="./images/Vector-pencil.svg" alt="Кнопка редактировать" class="profile__name-pencil">
                         </div>
                     </div>
                     <h2 class="profile__subtitle">
@@ -40,19 +39,19 @@
         <section id="popup-profile" class="popup">
             <div class="popup__container">
                     <button class="popup__close-btn">
-                        <img src="/images/close-icon.svg" alt="Кнопка закрытия" class="close__icon">
+                        <img src="./images/close-icon.svg" alt="Кнопка закрытия" class="close__icon">
                     </button>
                     <h2 class="popup__title">Редактировать профиль</h2>
                     <form id="form" action="" class="inputs">
                         
                             <div class="input__wrapper">
-                                <input class="popup__input popup__input-name" id="name"  placeholder="Введите имя" required minlength="2" maxlength="40">
+                                <input  name="name" class="popup__input popup__input-name" id="name"  placeholder="Введите имя" required minlength="2" maxlength="40">
                                 <span class="error-message name-error" id="name-error"></span>
                             </div>
                         
                       
                            <div class="input__wrapper">
-                                <input  class="popup__input popup__input-job" id="job" placeholder="Введите место работы" required minlength="2" maxlength="40">
+                                <input  name="job" class="popup__input popup__input-job" id="job" placeholder="Введите место работы" required minlength="2" maxlength="40">
                                 <span class="error-message job-error" id="job-error"></span>
                            </div>
                      
@@ -65,7 +64,7 @@
         <section id="popup-card" class="popup">
             <div class="popup__container">
                     <button class="popup__close-btn popup__close-btn-card">
-                        <img src="/images/close-icon.svg" alt="Кнопка закрытия" class="close__icon">
+                        <img src="./images/close-icon.svg" alt="Кнопка закрытия" class="close__icon">
                     </button>
                     <h2 class="popup__title">Новое Место</h2>
                     <form id="form-card" action="" class="inputs">
@@ -122,23 +121,18 @@
                             </svg>
                        
                 </div>
-                <div id='popup-image' class="popup__element">
-                    <div class="popup__element-container">
-                        <button class="popup__element-close">
-                            <img id="popup-image-pic" src="/images/close-icon.svg" alt="Кнопка закрытия" class="close__icon">
-                        </button>
-                        <div class="popup__content-container">
-                            <img src='' alt="Изображение карточки" class="element__image_popup">
-                            <h2 class="element__title_popup">
-                        </div>
-                        
-                        </h2>
-                    </div>
+            </div>
+        </template>
+        <div id="popup-image" class="popup__element">
+            <div class="popup__element-container">
+                <button class="popup__element-close">
+                    <img id="popup-image-pic" src="./images/close-icon.svg" alt="Кнопка закрытия" class="close__icon">
+                </button>
+                <div class="popup__content-container">
+                    <img src='' alt="Изображение карточки" class="element__image_popup show_img">
+                    <h2 class="element__title_popup show_txt"></h2>
                 </div>
             </div>
-
-        </template> 
-        <script type="module" src="./js/index.js"></script>
-        
+        </div>   
     </body>
 </html>

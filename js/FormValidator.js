@@ -15,7 +15,7 @@ export default class FormValidator{
       }
   }
     _toggleButtonState() {
-      console.log("Форма валидна?", this._form.checkValidity()); // Проверка валидности формы
+      console.log("Форма валидна?", this._form.checkValidity());
       if (this._form.checkValidity()) {
         this._submitButton.disabled = false;
       } else {
@@ -29,7 +29,7 @@ export default class FormValidator{
   
           if (!errorElement) {
               console.error(`Элемент ошибки для ${inputElement.id} не найден.`);
-              return; // Предотвращаем ошибку
+              return; 
           }
   
           inputElement.addEventListener('input', () => {
@@ -39,8 +39,8 @@ export default class FormValidator{
       });
   }
     enableValidation() {
-      this._setEventListeners(); // Используем метод _setEventListeners
-      this._toggleButtonState(); // Начальная проверка состояния кнопки
+      this._setEventListeners(); 
+      this._toggleButtonState(); 
     }
     
   }
