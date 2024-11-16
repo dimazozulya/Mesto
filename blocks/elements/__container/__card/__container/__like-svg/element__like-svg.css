@@ -7,6 +7,10 @@
     margin-left: auto;
     margin-right: 30px;
     fill: none;
+    transition: fill 0.3s ease;
+}
+.element__like-svg:hover {
+    fill: #636060;
 }
 
 .element__like-svg-active{
@@ -15,7 +19,6 @@
     cursor: pointer;
     justify-items: center;
     margin-left: auto;
-   
-    fill: none;
     fill:black;
 }
+
