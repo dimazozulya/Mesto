@@ -36,6 +36,18 @@
 @import url(../blocks/elements/popup__element/popup__element.css);
 
 
+/* Ховер-эффект для кнопки удаления (мусорка) */
+.element__card_remove_styles:hover {
+    cursor: pointer;
+    transform: scale(1.2); /* Увеличение при наведении */
+    transition: transform 0.3s ease, fill 0.3s ease;
+}
 
+/* Ховер-эффект для кнопки закрытия попапа */
+.popup__element-close img:hover {
+    transform: rotate(90deg); /* Поворот на 90 градусов */
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
 
 
