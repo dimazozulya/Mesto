@@ -1,0 +1,127 @@
+/*!****************************************************************************!*\
+  !*** css ../../node_modules/css-loader/dist/cjs.js!./vendor/normalize.css ***!
+  \****************************************************************************/
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}main{display:block}h1{font-size:2em;margin:.67em 0}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}[type=button],[type=reset],[type=submit],button{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{padding:.35em .75em .625em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{vertical-align:baseline}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details{display:block}summary{display:list-item}[hidden],template{display:none}
+/*!****************************************************************************!*\
+  !*** css ../../node_modules/css-loader/dist/cjs.js!./blocks/root/root.css ***!
+  \****************************************************************************/@font-face{font-display:swap;font-family:InterVariable;font-style:normal;font-weight:100 900;src:url(../fonts/InterVariable.ttf) format("truetype")}h1,h2{margin:0;padding:0}.root{background-color:#000;color:#fff;font-family:InterVariable;height:100vh;margin:0 auto;max-width:880px;padding:0 25px}
+
+/*!*************************************************************************************!*\
+  !*** css ../../node_modules/css-loader/dist/cjs.js!./fonts/inter-4.0/web/inter.css ***!
+  \*************************************************************************************/@font-face{font-display:swap;font-family:InterVariable;font-style:normal;font-weight:100 900;src:url(../fonts/InterVariable.woff2) format("woff2")}@font-face{font-display:swap;font-family:InterVariable;font-style:italic;font-weight:100 900;src:url(../fonts/InterVariable-Italic.woff2) format("woff2")}@font-face{font-display:swap;font-family:Inter;font-style:normal;font-weight:100;src:url(../fonts/Inter-Thin.woff2) format("woff2")}@font-face{font-display:swap;font-family:Inter;font-style:italic;font-weight:100;src:url(../fonts/Inter-ThinItalic.woff2) format("woff2")}@font-face{font-display:swap;font-family:Inter;font-style:normal;font-weight:200;src:url(../fonts/Inter-ExtraLight.woff2) format("woff2")}@font-face{font-display:swap;font-family:Inter;font-style:italic;font-weight:200;src:url(../fonts/Inter-ExtraLightItalic.woff2) format("woff2")}@font-face{font-display:swap;font-family:Inter;font-style:normal;font-weight:300;src:url(../fonts/Inter-Light.woff2) format("woff2")}@font-face{font-display:swap;font-family:Inter;font-style:italic;font-weight:300;src:url(../fonts/Inter-LightItalic.woff2) format("woff2")}@font-face{font-display:swap;font-family:Inter;font-style:normal;font-weight:400;src:url(../fonts/Inter-Regular.woff2) format("woff2")}@font-face{font-display:swap;font-family:Inter;font-style:italic;font-weight:400;src:url(../fonts/Inter-Italic.woff2) format("woff2")}@font-face{font-display:swap;font-family:Inter;font-style:normal;font-weight:500;src:url(../fonts/Inter-Medium.woff2) format("woff2")}@font-face{font-display:swap;font-family:Inter;font-style:italic;font-weight:500;src:url(../fonts/Inter-MediumItalic.woff2) format("woff2")}@font-face{font-display:swap;font-family:Inter;font-style:normal;font-weight:600;src:url(../fonts/Inter-SemiBold.woff2) format("woff2")}@font-face{font-display:swap;font-family:Inter;font-style:italic;font-weight:600;src:url(../fonts/Inter-SemiBoldItalic.woff2) format("woff2")}@font-face{font-display:swap;font-family:Inter;font-style:normal;font-weight:700;src:url(../fonts/Inter-Bold.woff2) format("woff2")}@font-face{font-display:swap;font-family:Inter;font-style:italic;font-weight:700;src:url(../fonts/Inter-BoldItalic.woff2) format("woff2")}@font-face{font-display:swap;font-family:Inter;font-style:normal;font-weight:800;src:url(../fonts/Inter-ExtraBold.woff2) format("woff2")}@font-face{font-display:swap;font-family:Inter;font-style:italic;font-weight:800;src:url(../fonts/Inter-ExtraBoldItalic.woff2) format("woff2")}@font-face{font-display:swap;font-family:Inter;font-style:normal;font-weight:900;src:url(../fonts/Inter-Black.woff2) format("woff2")}@font-face{font-display:swap;font-family:Inter;font-style:italic;font-weight:900;src:url(../fonts/Inter-BlackItalic.woff2) format("woff2")}@font-face{font-display:swap;font-family:InterDisplay;font-style:normal;font-weight:100;src:url(../fonts/InterDisplay-Thin.woff2) format("woff2")}@font-face{font-display:swap;font-family:InterDisplay;font-style:italic;font-weight:100;src:url(../fonts/InterDisplay-ThinItalic.woff2) format("woff2")}@font-face{font-display:swap;font-family:InterDisplay;font-style:normal;font-weight:200;src:url(../fonts/InterDisplay-ExtraLight.woff2) format("woff2")}@font-face{font-display:swap;font-family:InterDisplay;font-style:italic;font-weight:200;src:url(../fonts/InterDisplay-ExtraLightItalic.woff2) format("woff2")}@font-face{font-display:swap;font-family:InterDisplay;font-style:normal;font-weight:300;src:url(../fonts/InterDisplay-Light.woff2) format("woff2")}@font-face{font-display:swap;font-family:InterDisplay;font-style:italic;font-weight:300;src:url(../fonts/InterDisplay-LightItalic.woff2) format("woff2")}@font-face{font-display:swap;font-family:InterDisplay;font-style:normal;font-weight:400;src:url(../fonts/InterDisplay-Regular.woff2) format("woff2")}@font-face{font-display:swap;font-family:InterDisplay;font-style:italic;font-weight:400;src:url(../fonts/InterDisplay-Italic.woff2) format("woff2")}@font-face{font-display:swap;font-family:InterDisplay;font-style:normal;font-weight:500;src:url(../fonts/InterDisplay-Medium.woff2) format("woff2")}@font-face{font-display:swap;font-family:InterDisplay;font-style:italic;font-weight:500;src:url(../fonts/InterDisplay-MediumItalic.woff2) format("woff2")}@font-face{font-display:swap;font-family:InterDisplay;font-style:normal;font-weight:600;src:url(../fonts/InterDisplay-SemiBold.woff2) format("woff2")}@font-face{font-display:swap;font-family:InterDisplay;font-style:italic;font-weight:600;src:url(../fonts/InterDisplay-SemiBoldItalic.woff2) format("woff2")}@font-face{font-display:swap;font-family:InterDisplay;font-style:normal;font-weight:700;src:url(../fonts/InterDisplay-Bold.woff2) format("woff2")}@font-face{font-display:swap;font-family:InterDisplay;font-style:italic;font-weight:700;src:url(../fonts/InterDisplay-BoldItalic.woff2) format("woff2")}@font-face{font-display:swap;font-family:InterDisplay;font-style:normal;font-weight:800;src:url(../fonts/InterDisplay-ExtraBold.woff2) format("woff2")}@font-face{font-display:swap;font-family:InterDisplay;font-style:italic;font-weight:800;src:url(../fonts/InterDisplay-ExtraBoldItalic.woff2) format("woff2")}@font-face{font-display:swap;font-family:InterDisplay;font-style:normal;font-weight:900;src:url(../fonts/InterDisplay-Black.woff2) format("woff2")}@font-face{font-display:swap;font-family:InterDisplay;font-style:italic;font-weight:900;src:url(../fonts/InterDisplay-BlackItalic.woff2) format("woff2")}
+
+/*!************************************************************************!*\
+  !*** css ../../node_modules/css-loader/dist/cjs.js!./vendor/fonts.css ***!
+  \************************************************************************/
+
+/*!********************************************************************************!*\
+  !*** css ../../node_modules/css-loader/dist/cjs.js!./blocks/header/header.css ***!
+  \********************************************************************************/.header{border-bottom:1px solid #545454;padding:45px 0}
+/*!*********************************************************************************************!*\
+  !*** css ../../node_modules/css-loader/dist/cjs.js!./blocks/header/__logo/header__logo.css ***!
+  \*********************************************************************************************/
+/*!**********************************************************************************!*\
+  !*** css ../../node_modules/css-loader/dist/cjs.js!./blocks/profile/profile.css ***!
+  \**********************************************************************************/.profile{margin-top:40px}
+/*!*********************************************************************************************************!*\
+  !*** css ../../node_modules/css-loader/dist/cjs.js!./blocks/profile/__container/profile__container.css ***!
+  \*********************************************************************************************************/.profile__container{column-gap:15px;display:grid;grid-auto-flow:column;grid-template-columns:150px auto auto}@media(max-width:750px){.profile__container{grid-auto-flow:row;grid-template-columns:1fr;place-items:center}}
+/*!*********************************************************************************************************!*\
+  !*** css ../../node_modules/css-loader/dist/cjs.js!./blocks/profile/__container/__img/profile__img.css ***!
+  \*********************************************************************************************************/.profile__img{border-radius:100%;height:127px;object-fit:cover;width:130px}
+/*!***********************************************************************************************************!*\
+  !*** css ../../node_modules/css-loader/dist/cjs.js!./blocks/profile/__container/__info/profile__info.css ***!
+  \***********************************************************************************************************/.profile__info{padding-top:20px}
+/*!******************************************************************************************************************!*\
+  !*** css ../../node_modules/css-loader/dist/cjs.js!./blocks/profile/__container/__info/__name/profile__name.css ***!
+  \******************************************************************************************************************/.profile__name{display:flex}
+/*!*********************************************************************************************************************************!*\
+  !*** css ../../node_modules/css-loader/dist/cjs.js!./blocks/profile/__container/__info/__name/__name-btn/profile__name-btn.css ***!
+  \*********************************************************************************************************************************/.profile__name-btn{border:2px solid #fff;cursor:pointer;margin-left:20px;margin-top:5px;padding:5px 10px;transition:.2s ease-out}.profile__name-btn:hover{opacity:.5}
+
+/*!***********************************************************************************************************************************!*\
+  !*** css ../../node_modules/css-loader/dist/cjs.js!./blocks/profile/__container/__info/__name/__name-text/profile__name-text.css ***!
+  \***********************************************************************************************************************************/.profile__name-text{font-weight:500;max-width:400px}
+/*!**************************************************************************************************************************!*\
+  !*** css ../../node_modules/css-loader/dist/cjs.js!./blocks/profile/__container/__info/__subtitle/profile__subtitle.css ***!
+  \**************************************************************************************************************************/.profile__name-text,.profile__subtitle{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.profile__subtitle{font-weight:400;max-width:300px;padding-top:16px}
+/*!*********************************************************************************************************!*\
+  !*** css ../../node_modules/css-loader/dist/cjs.js!./blocks/profile/__container/__btn/profile__btn.css ***!
+  \*********************************************************************************************************/.profile__btn{margin-left:auto;margin-right:0;padding-top:35px}@media (max-width:750px){.profile__btn{margin:0 auto}}
+/*!**********************************************************************************************************************!*\
+  !*** css ../../node_modules/css-loader/dist/cjs.js!./blocks/profile/__container/__btn/_style/profile__btn_style.css ***!
+  \**********************************************************************************************************************/.profile__btn_style{background-color:transparent;border:2px solid #fff;color:#fff;cursor:pointer;display:flex;font-size:40px;padding:0 75px 5px;position:relative;transition:.2s ease-out}.profile__btn_style:hover{border:2px solid #545454;color:#545454}
+/*!******************************************************************************!*\
+  !*** css ../../node_modules/css-loader/dist/cjs.js!./blocks/popup/popup.css ***!
+  \******************************************************************************/.popup{background-color:#0000008e;height:100vh;left:0;opacity:0;position:fixed;top:0;transition:opacity .3s,visibility .4s;visibility:hidden;width:100%;z-index:100000}
+
+/*!*********************************************************************************************!*\
+  !*** css ../../node_modules/css-loader/dist/cjs.js!./blocks/popup/_active/popup_active.css ***!
+  \*********************************************************************************************/
+/*!*****************************************************************************************************!*\
+  !*** css ../../node_modules/css-loader/dist/cjs.js!./blocks/popup/__container/popup__container.css ***!
+  \*****************************************************************************************************/.popup__container{background-color:#fff;border-radius:20px;display:grid;margin:200px auto 0;max-height:330px;max-width:430px;padding:35px;position:center;position:relative}
+/*!**********************************************************************************************************!*\
+  !*** css ../../node_modules/css-loader/dist/cjs.js!./blocks/popup/__container/__close-btn/close-btn.css ***!
+  \**********************************************************************************************************/.popup__close-btn{all:unset;cursor:pointer;left:100%;max-height:32px;max-width:32px;position:absolute;top:-40px;transition:.3s ease-out}.popup__close-btn:hover{opacity:.5}
+/*!*********************************************************************************************************!*\
+  !*** css ../../node_modules/css-loader/dist/cjs.js!./blocks/popup/__container/__title/popup__title.css ***!
+  \*********************************************************************************************************/.popup__title{color:#000;font-size:30px}
+/*!*********************************************************************************************************!*\
+  !*** css ../../node_modules/css-loader/dist/cjs.js!./blocks/popup/__container/__input/popup__input.css ***!
+  \*********************************************************************************************************/.popup__input{all:unset;border-bottom:2px solid #00000042;color:#000;padding-bottom:10px;width:100%}
+/*!***************************************************************************************************************************!*\
+  !*** css ../../node_modules/css-loader/dist/cjs.js!./blocks/popup/__container/__input/__input-name/popup__input-name.css ***!
+  \***************************************************************************************************************************/.popup__input-name{margin:55px 0 0}
+/*!*************************************************************************************************************************!*\
+  !*** css ../../node_modules/css-loader/dist/cjs.js!./blocks/popup/__container/__input/__input-job/popup__input-job.css ***!
+  \*************************************************************************************************************************/.popup__input-job{margin:23px 0 0}
+/*!*************************************************************************************************************************!*\
+  !*** css ../../node_modules/css-loader/dist/cjs.js!./blocks/popup/__container/__submit-button/popup__submit-button.css ***!
+  \*************************************************************************************************************************/.popup__submit-button{all:unset;background-color:#000;border-radius:10px;cursor:pointer;height:50px;margin-left:15px;margin-top:50px;text-align:center;transition:.3s ease-out;width:90%}.popup__submit-button:hover{background-color:#383838}
+/*!************************************************************************************!*\
+  !*** css ../../node_modules/css-loader/dist/cjs.js!./blocks/elements/elements.css ***!
+  \************************************************************************************/.elements{margin-top:40px}
+/*!***********************************************************************************************************!*\
+  !*** css ../../node_modules/css-loader/dist/cjs.js!./blocks/elements/__container/elements__container.css ***!
+  \***********************************************************************************************************/.elements__container{align-items:center;display:grid;gap:15px 0;grid-template-columns:repeat(auto-fit,minmax(282px,auto));justify-items:center}
+/*!************************************************************************************************************!*\
+  !*** css ../../node_modules/css-loader/dist/cjs.js!./blocks/elements/__container/__card/element__card.css ***!
+  \************************************************************************************************************/.element__card{margin:0 15px;max-height:361px;max-width:282px;position:relative}
+/*!***************************************************************************************************************************!*\
+  !*** css ../../node_modules/css-loader/dist/cjs.js!./blocks/elements/__container/__card/__image/element__image_style.css ***!
+  \***************************************************************************************************************************/.element__image_style{border-radius:10% 10% 0 0;cursor:pointer;display:block;height:282px;overflow:hidden;width:100%}.element__image_style img{max-height:150%;max-width:200%}
+
+/*!*****************************************************************************************************************************!*\
+  !*** css ../../node_modules/css-loader/dist/cjs.js!./blocks/elements/__container/__card/__container/element__container.css ***!
+  \*****************************************************************************************************************************/.element__container{align-items:center;background-color:#fff;border-radius:0 0 20px 20px;color:#000;display:grid;grid-template-columns:4fr 1fr;height:80px;max-width:282px}.error-message{color:red;display:none;font-size:12px}.popup__submit-button:disabled{background-color:#ccc;cursor:not-allowed}
+
+/*!*********************************************************************************************************************************!*\
+  !*** css ../../node_modules/css-loader/dist/cjs.js!./blocks/elements/__container/__card/__container/__title/element__title.css ***!
+  \*********************************************************************************************************************************/
+
+/*!***************************************************************************************************************************************!*\
+  !*** css ../../node_modules/css-loader/dist/cjs.js!./blocks/elements/__container/__card/__container/__like-svg/element__like-svg.css ***!
+  \***************************************************************************************************************************************/.element__like-svg{cursor:pointer;height:30px;justify-items:center;margin-left:auto;margin-right:30px;width:32px;fill:none;transition:fill .3s ease}.element__like-svg:hover{fill:#636060}.element__like-svg-active{cursor:pointer;height:30px;justify-items:center;margin-left:auto;width:32px;fill:#000}
+
+
+/*!********************************************************************************!*\
+  !*** css ../../node_modules/css-loader/dist/cjs.js!./blocks/footer/footer.css ***!
+  \********************************************************************************/.footer{margin-top:70px;padding-bottom:60px}
+/*!*********************************************************************************************************************************!*\
+  !*** css ../../node_modules/css-loader/dist/cjs.js!./blocks/footer/__container/__container-author/footer__container-author.css ***!
+  \*********************************************************************************************************************************/.footer__container-author{color:#545454;font-size:18px;font-weight:400}
+
+/*!***************************************************************************************************************************!*\
+  !*** css ../../node_modules/css-loader/dist/cjs.js!./blocks/elements/__container/__card/_remove/element__card_remove.css ***!
+  \***************************************************************************************************************************/.element__card_remove{cursor:pointer;height:19px;position:absolute;right:7%;top:5%;width:19px}
+/*!********************************************************************************************************************************************!*\
+  !*** css ../../node_modules/css-loader/dist/cjs.js!./blocks/elements/__container/__card/__container/__title/_card/element__title_card.css ***!
+  \********************************************************************************************************************************************/.element__title_card{color:#000;font-size:24px;font-weight:900px;max-width:170px;overflow:hidden;padding-left:15px;text-overflow:ellipsis;white-space:nowrap}
+/*!*********************************************************************************************************!*\
+  !*** css ../../node_modules/css-loader/dist/cjs.js!./blocks/elements/popup__element/popup__element.css ***!
+  \*********************************************************************************************************/.popup__element{align-items:center;background-color:hsla(0,2%,9%,.941);display:flex;height:100vh;justify-content:center;left:0;opacity:0;position:fixed;top:0;transition:opacity .3s,visibility .4s;visibility:hidden;width:100%;z-index:1000}.popup_active{opacity:1;visibility:visible}.element__image_popup{margin-bottom:15px;object-fit:cover;padding-bottom:20px;padding-top:50px;width:100%}.popup__element-container{color:#fff;font-size:12px;font-weight:400;grid-template-rows:100% 30px;margin:0 auto;position:relative}.popup__content-container img{margin:auto;max-height:70vh;max-width:100%;object-fit:contain}.popup__element-close{all:unset;cursor:pointer;max-height:32px;max-width:32px;position:absolute;right:-50px;top:0;transition:.3s ease-out}.popup__close-close:hover{opacity:.5}.close__icon:hover{cursor:pointer;transform:rotate(90deg);transition:transform .3s ease}
+
+/*!*******************************************************************************************************************!*\
+  !*** css ../../node_modules/css-loader/dist/cjs.js!../../node_modules/postcss-loader/dist/cjs.js!./src/style.css ***!
+  \*******************************************************************************************************************/.element__card_remove_styles:hover{cursor:pointer;transform:scale(1.2);transition:transform .3s ease,fill .3s ease}.popup__element-close img:hover{cursor:pointer;transform:rotate(90deg);transition:transform .3s ease}
