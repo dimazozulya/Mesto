@@ -13,7 +13,6 @@ import Section from '../js/Section.js';
 import UserInfo from '../js/UserInfo.js';
 import FormValidator from '../js/FormValidator.js';
 
-// Установка иконок
 document.querySelector('.profile__name-pencil').src = pencilIcon;
 document.querySelector('.header__image').src = logo;
 document.querySelector('.profile__img').src = profileImg;
@@ -21,20 +20,16 @@ document.querySelectorAll('.close__icon').forEach((btn) => {
   btn.src = closeIcon;
 });
 
-// Валидация форм
 const formProfile = new FormValidator('#form', '.popup__input', '.popup__submit-button', '.error-message');
 const formCard = new FormValidator('#form-card', '.popup__input', '.popup__submit-button-card', '.error-message');
 formProfile.enableValidation();
 formCard.enableValidation();
 
-// Работа с API
 const api = new Api('https://jsonplaceholder.typicode.com');
 
-// Popup для просмотра изображения
 const popupWithImage = new PopupWithImage('#popup-image');
 popupWithImage.setEventListeners();
 
-// Callback для открытия изображения
 function handleCardClick(link, name) {
   popupWithImage.open(link, name);
 }
@@ -60,34 +55,26 @@ const renderer = (item) => {
   console.log('Рендер карточки:', item);
 };
 
-// Инициализация Section
 let section = new Section({ renderer }, '#content');
 
-// Загрузка карточек с сервера
 api.getCards()
   .then((cards) => {
-    // Логируем все карточки, чтобы посмотреть, есть ли userId
     console.log('Исходные данные карточек:', cards);
 
     const formattedCards = cards.map((card) => {
-      console.log('card.userId:', card.userId); // Логируем userId каждой карточки
+      console.log('card.userId:', card.userId); 
       return {
         name: card.title || 'Без названия',
         link: `https://picsum.photos/600/400?random=${card.id}`,
         likes: card.likes || [],
         id: card.id,
-        ownerId: card.userId || null, // Проверяем, что card.userId существует
+        ownerId: card.userId || null, 
       };
     });
     console.log('Сформированные данные карточек:', formattedCards);
     section.renderItems(formattedCards);
   })
   .catch((err) => console.error('Ошибка загрузки карточек:', err));
-
-  // document.addEventListener('DOMContentLoaded', () => {
-  //   new CardForm('#form-card', '#card', 'popup-card', section, handleCardClick, api);
-  // });
-// Загрузка данных пользователя
 api.getUserInfo()
   .then((data) => {
     const nameElement = document.querySelector('.profile__name-text');
@@ -103,7 +90,6 @@ api.getUserInfo()
   })
   .catch((err) => console.log(err));
 
-// Создание PopupWithForm для редактирования профиля
 const userInfo = new UserInfo({
   nameSelector: '.profile__name-text',
   jobSelector: '.profile__subtitle',
@@ -113,15 +99,13 @@ api.getUserInfo()
   .then((data) => {
     console.log('Данные пользователя с сервера:', data);
 
-    // Обновляем DOM
     userInfo.setUserInfo({
       name: data.name,
-      job: data.username, // JSONPlaceholder использует "username"
+      job: data.username, 
     });
   })
   .catch((err) => console.error('Ошибка при загрузке пользователя:', err));
 
-// Popup для редактирования профиля
 const profilePopup = new PopupWithForm(
   '#popup-profile',
   '#form',
@@ -129,14 +113,12 @@ const profilePopup = new PopupWithForm(
   (formData) => {
     console.log('Данные для обновления профиля:', formData);
 
-    api.updateUserInfo({
+    return api.updateUserInfo({
       name: formData.name,
-      username: formData.job, // JSONPlaceholder использует "username"
+      username: formData.job, 
     })
     .then((updatedData) => {
       console.log('Обновлённые данные пользователя:', updatedData);
-
-      // Обновляем интерфейс
       userInfo.setUserInfo({
         name: updatedData.name,
         job: updatedData.username,
@@ -155,35 +137,41 @@ document.querySelector('.profile__name-btn').addEventListener('click', () => {
   const currentUserInfo = userInfo.getUserInfo();
   console.log('Текущие данные профиля:', currentUserInfo);
 
-  // Заполняем форму текущими данными
   document.querySelector('.popup__input-name').value = currentUserInfo.name;
   document.querySelector('.popup__input-job').value = currentUserInfo.job;
 
   profilePopup.open();
 });
 profilePopup.setEventListeners();
-// Создание PopupWithForm для добавления карточек
+
 const cardPopup = new PopupWithForm(
   '#popup-card',
   '#form-card',
   '.popup__input',
   (formData) => {
     console.log('Данные из формы: ', formData);
-    const card = new Card(
-      formData.name,       
-      formData.link,       
-      [],                  
-      null,                
-      currentUserId,       
-      null,                
-      '#card',             
-      handleCardClick,     
-      api,                 
-      currentUserId        
-    );
 
-    section.addItem(card.generateCard());
-    console.log('Карточка создана: ', card); 
+    return api.addCard({ name: formData.name, link: formData.link })
+      .then((newCard) => {
+        console.log('Ответ сервера: ', newCard);
+
+        
+        const card = new Card(
+          newCard.title,       
+          formData.link,       
+          [],                  
+          newCard.id,         
+          currentUserId,      
+          newCard.id,      
+          '#card',         
+          handleCardClick,    
+          api,                 
+          currentUserId   
+        );
+
+        section.addItem(card.generateCard()); 
+        console.log('Карточка создана и добавлена: ', card);
+      });
   }
 );
 const formAvatar = new FormValidator ('#form-avatar', '.popup__input', '.popup__submit-button', '.error-message');
@@ -196,7 +184,7 @@ const avatarPopup = new PopupWithForm(
   (formData) => {
     console.log('Ссылка на аватар: ', formData.avatar);
 
-      api.updateAvatar(formData)
+     return api.updateAvatar(formData)
         .then((updatedData) => {
           console.log('Обновленный аватар: ', updatedData);
           document.querySelector('.profile__img').src = updatedData.avatar;

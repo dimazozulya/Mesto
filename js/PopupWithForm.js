@@ -6,6 +6,7 @@ export default class PopupWithForm extends Popup {
       this._submitCallback = submitCallback;
       this._form = this._popup.querySelector(formSelector);
       this._inputList = this._form.querySelectorAll(inputSelector);
+      this._submitButton = this._form.querySelector('.popup__submit-button');
     }
   
     _getInputValues() {
@@ -17,14 +18,28 @@ export default class PopupWithForm extends Popup {
     }
   
     _handleSubmit(event) {
-      event.preventDefault(); 
+      event.preventDefault();
+    
+     
+      this._initialButtonText = this._submitButton.textContent; 
+      this._submitButton.textContent = 'Сохранение...';
+    
       const formData = this._getInputValues();
-      this._submitCallback(formData);
-      this.close();
+    
+      this._submitCallback(formData) 
+        .then(() => this.close()) 
+        .catch((err) => {
+          console.error('Ошибка при обновлении данных:', err);
+          alert('Не удалось обновить данные. Попробуйте ещё раз.'); 
+        })
+        .finally(() => {
+          
+          this._submitButton.textContent = this._initialButtonText;
+        });
     }
     setEventListeners() {
     super.setEventListeners();
-    this._form.addEventListener('submit', this._handleSubmit.bind(this)); // Добавляем обработчик
+    this._form.addEventListener('submit', this._handleSubmit.bind(this)); 
   }
   
     close() {

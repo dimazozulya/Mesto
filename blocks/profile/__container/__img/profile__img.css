@@ -26,20 +26,20 @@
     position: absolute;
     top: 50%;
     left: 45%;
-    transform: translate(-50%, -50%); /* Центрирование */
+    transform: translate(-50%, -50%); 
     width: 30px;
     height: 30px;
-    opacity: 0; /* Скрыто по умолчанию */
+    opacity: 0;
     transition: opacity 0.3s ease;
   }
   .image-container:hover .image-container__overlay {
-    opacity: 1; /* Появляется затемнение */
+    opacity: 1; 
   }
   
   .image-container:hover .image-container__icon {
-    opacity: 1; /* Иконка появляется */
+    opacity: 1; 
   }
   
   .image-container:hover .image-container__img {
-    transform: scale(1.1); /* Небольшое увеличение изображения */
+    transform: scale(1.1); 
   }
