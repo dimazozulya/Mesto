@@ -28,10 +28,19 @@ export default class CardForm {
     this._api.addCard({ name: nameInput, link: linkInput })
     .then((newCard) => {
       console.log('Ответ сервера:', newCard);
-      const card = new Card(newCard.title, linkInput, this._templateSelector, this._handleCardClick);
-      const cardElement = card.generateCard();
-      console.log('Section:', this._section);
-      this._section.addItem(cardElement);
+      const card = new Card(
+        newCard.title,       
+        linkInput,           
+        [],                  
+        newCard.id,          
+        1,                   
+        null,                 
+        '#card',     // <-- сюда передаётся селектор
+        this._handleCardClick, 
+        this._api, 
+        1                  
+      );
+      this._section.addItem(card.generateCard());
       this._form.reset();
       this._closePopup();
     })
