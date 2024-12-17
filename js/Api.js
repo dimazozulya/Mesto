@@ -98,4 +98,18 @@ export default class Api {
             }
         });
     }
+    updateAvatar(data){
+        return fetch(`${this.baseUrl}/users/1`, {
+            method: 'PATCH',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                avatar: data.avatar
+            }),
+        }).then((res) => {
+            if (res.ok) return res.json();
+            return Promise.reject(`Ошибка: ${res.status}`);
+        })
+    }
 }

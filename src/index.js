@@ -170,24 +170,52 @@ const cardPopup = new PopupWithForm(
   (formData) => {
     console.log('Данные из формы: ', formData);
     const card = new Card(
-      formData.name,       // Имя карточки
-      formData.link,       // Ссылка на изображение
-      [],                  // Лайки, если пока нет
-      null,                // ID карточки
-      currentUserId,       // ID владельца карточки (например, текущего пользователя)
-      null,                // ID для сервера, если есть
-      '#card',             // Селектор шаблона карточки
-      handleCardClick,     // Обработчик клика на изображение
-      api,                 // Объект API для взаимодействия с сервером
-      currentUserId        // ID текущего пользователя для проверки прав
+      formData.name,       
+      formData.link,       
+      [],                  
+      null,                
+      currentUserId,       
+      null,                
+      '#card',             
+      handleCardClick,     
+      api,                 
+      currentUserId        
     );
 
     section.addItem(card.generateCard());
     console.log('Карточка создана: ', card); 
   }
 );
+const formAvatar = new FormValidator ('#form-avatar', '.popup__input', '.popup__submit-button', '.error-message');
+formAvatar.enableValidation();
+
+const avatarPopup = new PopupWithForm(
+  '#popup-avatar',
+  '#form-avatar',
+  '.popup__input',
+  (formData) => {
+    console.log('Ссылка на аватар: ', formData.avatar);
+
+      api.updateAvatar(formData)
+        .then((updatedData) => {
+          console.log('Обновленный аватар: ', updatedData);
+          document.querySelector('.profile__img').src = updatedData.avatar;
+          avatarPopup.close();
+        })
+        .catch((err) =>{
+          console.error('Ошибка при обновлении аватара:', err);
+          alert('Не удалось обновить аватар. Попробуйте еще раз');
+        });
+  }
+)
+document.querySelector('.image-container__overlay').addEventListener('click', () => {
+  avatarPopup.open();
+});
+avatarPopup.setEventListeners();
 
 document.querySelector('.profile__btn').addEventListener('click', () => {
   cardPopup.open();
 });
 cardPopup.setEventListeners();
+
+

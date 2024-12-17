@@ -13,9 +13,14 @@
         </header>
         <section class="profile">
             <div class="profile__container">
-                <a href="#" class="profile__link-img">
+                <div class="image-container">
                     <img src="./images/profile__img.jpg" alt="Изображение Вашего профиля" class="profile__img">
-                </a>
+                <div class="image-container__overlay">
+                    <svg class="image-container__icon" width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10 1.32827L2.60377 8.7666L1.28302 7.41936L8.66038 0L10 1.32827ZM0 10L1.96226 9.41177L0.584906 8.08349L0 10Z" fill="white"/>
+                    </svg>
+                </div>
+            </div>
                 <div class="profile__info">
                     <div class="profile__name">
                         <h1 class="profile__name-text">
@@ -82,6 +87,28 @@
                         <button type="submit" class="popup__submit-button popup__submit-button-card" disabled>Сохранить</button>      
                     </form>
                    
+            </div>
+        </section>
+
+        <section id="popup-avatar" class="popup">
+            <div class="popup__container">
+                <button class="popup__close-btn">
+                    <img src="./images/close-icon.svg" alt="Кнопка закрытия" class="close__icon">
+                </button>
+                <h2 class="popup__title">Обновить Аватар</h2>
+                <form id="form-avatar" class="inputs">
+                    <div class="input__wrapper">
+                        <input 
+                        name="avatar" 
+                        class="popup__input popup__input-name" 
+                        id="avatar" 
+                        placeholder="Ссылка на аватар" 
+                        required 
+                        type="url">
+                        <span class="error-message avatar-error" id="avatar-error"></span>
+                    </div>
+                    <button type="submit" class="popup__submit-button" disabled>Сохранить</button>
+                </form>
             </div>
         </section>
 
